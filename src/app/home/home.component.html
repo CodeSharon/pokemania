@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> POKEMANIA </h1>
+    </div>
+    <div class="example-card-container">
+        <div *ngFor="let pokemon of pokemonDatas" class="example-card">
+            <mat-card>
+                <img class="pokemon-image" mat-card-image [src]="pokemon.image" [alt]="pokemon.name">
+                <mat-card-content>
+                    {{ pokemon.name }}
+                </mat-card-content>
+            <mat-card-actions>
+    <a mat-button [routerLink]="['/pokemon', pokemon.idPokemon]" target="_blank">voir ></a>
+</mat-card-actions>
+
+            </mat-card>
+        </div>
+    </div>
+</body>
+</html>
